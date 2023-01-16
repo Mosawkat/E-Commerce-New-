@@ -1,3 +1,6 @@
+body {
+    background-color: black;
+}
 /* Navigation */
 .navigation
 {
@@ -26,7 +29,12 @@
 }
 .title:hover
 {
-    
+ /* add */   
+}
+.accountLogo
+{
+    width: 30%;
+    height:100%;
 }
 /* Cart Amount */
 .cartAmount
@@ -47,8 +55,7 @@
 {
     display: flex;
     justify-content: center;
-    padding: 2%;
-    background-color: rgba(128, 128, 128, 0.274);
+    scale: 0.9;
 }
 /* All General Categories */
 .cat
@@ -59,14 +66,22 @@
     height:150px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 30px;
     margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
     transition: .5s ease-in-out;
 }
 /* Categories on hover */
 .cat:hover
 {
-    transform: translateY(-10px) scale(1.05);
-    filter: drop-shadow(8px 8px 10px rgb(255, 255, 255));
+    /* Add hover effect only if its suited */
+}
+.cat.active
+{
+    border-width: 5px;
+    border-color: rgb(153, 153, 153);
+    border-style: solid;
 }
 /* All title Div Container */
 .titleDiv
@@ -80,7 +95,20 @@
     font-size: 220%;
     font-family: 'Karla', sans-serif;
 }
-
+/* Show and Hide Divs */
+.show
+{
+    background-color: rgb(131, 131, 131);
+    color:rgb(116, 116, 116);
+}
+/* Show Hide Text */
+.HS
+{
+    font-size: 200%;
+    font-family: 'Karla', sans-serif;
+    margin-top:35%;
+    color:white;
+}
 /* Playstation Category */
 .playstation
 {
@@ -148,10 +176,132 @@
 }
 .pc:hover
 {
-    filter: sepia(100%);
+    filter: sepia(200%);
 }
 .pcLogo
 {
     width: 100%;
     height:100%;
+}
+
+
+/* Products Div */
+.products
+{
+    display: flex;
+    justify-content: center;
+}
+/* Each individual Product */
+.product
+{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    justify-content: stretch;
+}
+.product:hover
+{
+    /* Add hover functionality */
+}
+/* Product Picture Div */
+.productPic
+{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+}
+/* Actual Product Picture */
+.productPicture
+{
+    width: 50%;
+    height: 10%;
+}
+/* Product Title Div */
+.productTitle
+{
+    text-align: center;
+}
+/* Actual Product Title */
+.Ptitle
+{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color:black;
+    font-size: 200%;
+    font-family: 'DM Serif Display', serif;
+}
+/* Price Div */
+.price
+{
+    text-align: center;
+}
+/* Actual Price */
+.Pprice
+{
+    color:black;
+    font-size: 150%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'DM Serif Display', serif;
+}
+/* Two Buttons Div */
+.twoButtons
+{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+/* Actual Two Buttons */
+.twoButton
+{
+    font-size: 150%;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2%;
+    color:black;
+    font-family: 'Outfit', sans-serif;
+}
+.viewButton
+{
+    color:rgb(107, 201, 255);
+}
+.viewButton:hover
+{
+    /* Add hover functionality */
+}
+.cartButton
+{
+    color:rgb(0, 162, 255);
+}
+.cartButton:hover
+{
+    /* Add hover functionality */
+}
+/* Specific Picture Aspect Rations (To make all the sizes align) */
+#ps5Pic
+{
+    flex:0.53;
+}
+#xboxXPic
+{
+    flex:0.54;
+}
+#switchPic
+{
+    flex:0.65;
+}
+#PCPic
+{
+    flex:.65;
 }

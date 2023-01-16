@@ -2,6 +2,7 @@
 <!--Mohammed Sawkat-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="indexMobile.css">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <link href="example" rel="stylesheet/scss" type="text/css">
@@ -13,63 +14,185 @@
 <script language="javascript" type="text/javascript" src="jquery.js"></script>
 <script language="javascript" type="text/javascript" src="jquery.equalheights.js"></script>
 <script>
+$(document).ready(function(){
+    $('.playstation').click(function() { //When Playstation logo is clicked
+        
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('#playstation').fadeOut();
+            //Should remove only Playstation products when this is deactivated.
+            //check if it's the only one selected, if it is, then show only playstation, otherwise just show the items.
+            //If it's the only one selected, then only playstation products should be shown.
+            
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('#playstation').fadeIn();
+            //Should show Playstation products when this is active.
+        }
+    });
 
+    $('.xbox').click(function() { //When Playstation logo is clicked
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('#xbox').fadeOut();
+            //Should remove only Playstation products when this is deactivated.
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('#xbox').fadeIn();
+            //Should show Playstation products when this is active.
+        }
+    });
+
+    $('.nintendo').click(function() { //When Playstation logo is clicked
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('#nintendo').fadeOut();
+            //Should remove only Playstation products when this is deactivated.
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('#nintendo').fadeIn();
+            //Should show Playstation products when this is active.
+        }
+    });
+
+    $('.pc').click(function() { //When Playstation logo is clicked
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('#pc').fadeOut();
+            //Should remove only Playstation products when this is deactivated.
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('#pc').fadeIn();
+            //Should show Playstation products when this is active.
+        }
+    });
+
+    $('#HS').click(function() { //When Playstation logo is clicked
+            $('#playstation').fadeIn();
+            $('#xbox').fadeIn();
+            $('#nintendo').fadeIn();
+            $('#pc').fadeIn();
+    });
+
+});
 </script>
 </head>
 <head>
     <title> Home </title>
 </head>
 
-<body style="background-color:black;">
-<nav class="navigation" id="navigation">
-    <div class="navContainer" id="navContainer">
-        <div class="link one" id="links">
-            <a class="linkOne title" id="linkOneTitle" href=""> Catalog </a>
+<body>
+<nav class="navigation" id="navigation"> <!-- Navigation Bar at the top of the page -->
+    <div class="navContainer" id="navContainer"> <!-- Navigation Div -->
+        <div class="link" id="link"> <!-- Second Link Div -->
+            <a class="linkTwo title" id="linkTwoTitle" onclick=""><i class="bi bi-person-circle" style="cursor:pointer;"></i> </a> <!-- Account Link -->
         </div>
-        <div class="link two" id="linkTwoTitle">
-            <a class="linkTwo title" id="linkTwoTitle" href=""> Account </a>
-        </div>
-        <div class="link three" id="linkThreeTitle">
-            <a class="link three title" id="linkThreeTitle" href=""><i class="bi bi-cart-fill"></i></a>
-            <p class="cartAmount" id="cartAmount"> 0 </p>
+        <div class="link three" id="linkThreeTitle"> <!-- Third Link Div -->
+            <a class="link title" id="linkThreeTitle" href=""><i class="bi bi-cart-fill"></i></a> <!-- Cart Link -->
+            <p class="cartAmount" id="cartAmount"> 0 </p> <!-- Amount in Cart -->
         </div>
     </div>
 </nav>
 
-<div class="categories" class="categories">
-    <div class="playstation cat" id="playstationCat">
-        <img draggable="false" class="playstationLogo" id="playstationLogo" src="playstationlogo.png" alt="The Playstation Logo"/>
+<div class="categories" class="categories"> <!-- Categories Div -->
+    <div class="playstation cat" id="playstationID cat"> <!-- Playstation Div -->
+        <img draggable="false" class="playstationLogo" id="playstationLogo" src="playstationlogo.png" alt="The Playstation Logo"/> <!-- Playstation Logo -->
     </div>
 
-    <div class="xbox cat" id="xboxCat">
-        <img draggable="false" class="xboxLogo" id="xboxLogo" src="xboxlogo.png" alt="The Xbox Logo"/>
+    <div class="xbox cat" id="xbox cat"> <!-- Xbox Div -->
+        <img draggable="false" class="xboxLogo" id="xboxLogo" src="xboxlogo.png" alt="The Xbox Logo"/> <!-- Xbox Logo -->
     </div>
 
-    <div class="nintendo cat" id="nintendoCat">
-        <img draggable="false" class="nintendoLogo" id="nintendoLogo" src="nintendologo.png" alt="The Nintendo Logo"/>
+    <div class="nintendo cat" id="nintendo cat"> <!-- Nintendo Div -->
+        <img draggable="false" class="nintendoLogo" id="nintendoLogo" src="nintendologo.png" alt="The Nintendo Logo"/> <!-- Nintendo Logo -->
     </div>
 
-    <div class="pc cat" id="nintendoCat">
-        <img draggable="false" class="pcLogo" id="pcLogo" src="pclogo.png" alt="The PC Logo"/>
+    <div class="pc cat" id="pc cat"> <!-- PC Div -->
+        <img draggable="false" class="pcLogo" id="pcLogo" src="pclogo.png" alt="The PC Logo"/> <!-- PC Logo -->
+    </div>
+    <div class="show cat" id="showAll">
+        <h1 class="HS" id="HS"> Show All</h1>
+    </div>
+</div>
+
+<div class="products" id="products"> <!-- All the Products -->
+    <div class="product" id="playstation"> <!-- Playstation 5 Div-->
+        <div class="productPic"> <!-- Picture Div -->
+            <img src="ps5.png" alt="A PlayStation 5" draggable="false" class="productPicture" id="ps5Pic" /> <!-- Picture -->
+        </div>
+        <div class="productTitle" id="productTitle"> <!-- Title Div -->
+            <h3 class="Ptitle"> PlayStation 5</h3> <!-- Title -->
+        </div>
+        <div class="price" id="price"> <!-- Price Div -->
+            <h4 class="Pprice" id="ps5 price"> $499 </h4> <!-- Price -->
+        </div>
+        <div class="twoButtons"> <!-- Two Buttons Div -->
+            <a class="viewButton twoButton" id="viewButton ps5" onclick=""> <span> Details </span> </a> <!-- Details Button -->
+            <a class="cartButton twoButton" id="cartButton ps5" onclick=""> <span> Add to Cart </span> </a> <!-- Add to Cart Button -->
+        </div>
+    </div>
+
+    <div class="product" id="xbox"> <!-- Xbox Series X Div-->
+        <div class="productPic"> <!-- Picture Div -->
+            <img src="xboxX.png" alt="A Xbox Series X" draggable="false" class="productPicture" id="xboxXPic" /> <!-- Picture -->
+        </div>
+        <div class="productTitle" id="productTitle"> <!-- Title Div -->
+            <h3 class="Ptitle"> Xbox Series X</h3> <!-- Title -->
+        </div>
+        <div class="price" id="price"> <!-- Price Div -->
+            <h4 class="Pprice" id="xboxX price"> $599 </h4> <!-- Price -->
+        </div>
+        <div class="twoButtons">
+            <a class="viewButton twoButton" id="viewButton ps5" onclick=""> <span> Details </span> </a> <!-- Details Button -->
+            <a class="cartButton twoButton" id="cartButton ps5" onclick=""> <span> Add to Cart </span> </a> <!-- Add to Cart Button -->
+        </div>
+    </div>
+
+    <div class="product" id="nintendo"> <!-- Nintendo Switch Div Div-->
+        <div class="productPic"> <!-- Picture Div -->
+            <img src="switch.png" alt="A Nintendo Switch" draggable="false" class="productPicture" id="switchPic" /> <!-- Picture -->
+        </div>
+        <div class="productTitle" id="productTitle"> <!-- Title Div -->
+            <h3 class="Ptitle"> Nintendo Switch</h3> <!-- Title -->
+        </div>
+        <div class="price" id="price"> <!-- Price Div -->
+            <h4 class="Pprice" id="switch price"> $299 </h4> <!-- Price -->
+        </div>
+        <div class="twoButtons">
+            <a class="viewButton twoButton" id="viewButton ps5" onclick=""> <span> Details </span> </a> <!-- Details Button -->
+            <a class="cartButton twoButton" id="cartButton ps5" onclick=""> <span> Add to Cart </span> </a> <!-- Add to Cart Button -->
+        </div>
+    </div>
+
+    <div class="product" id="pc"> <!-- Prebuilt PC Div-->
+        <div class="productPic"> <!-- Picture Div -->
+            <img src="prebuilt.png" alt="A Prebuilt PC" draggable="false" class="productPicture" id="PCPic" /> <!-- Picture -->
+        </div>
+        <div class="productTitle" id="productTitle"> <!-- Title Div -->
+            <h3 class="Ptitle"> Prebuilt PC</h3> <!-- Title -->
+        </div>
+        <div class="price" id="price"> <!-- Price Div -->
+            <h4 class="Pprice" id="ps5 price"> $799 </h4> <!-- Price -->
+        </div>
+        <div class="twoButtons">
+            <a class="viewButton twoButton" id="viewButton ps5" onclick=""> <span> Details </span> </a> <!-- Details Button -->
+            <a class="cartButton twoButton" id="cartButton ps5" onclick=""> <span> Add to Cart </span> </a> <!-- Add to Cart Button -->
+        </div>
     </div>
 
 </div>
 
 </body>
 </html>
-
-
-<!-- 
-    OLD TITLES WITH PICS
-        <div class="titleDiv" id="titleDiv" onclick="">
-            <h1 class="categoryTitle" id="categoryTitle"> PlayStation </h1>
-        </div>
-
-        <div class="titleDiv" id="titleDiv" onclick="">
-            <h1 class="categoryTitle" id="categoryTitle"> Xbox </h1>
-        </div>
-
-           <div class="titleDiv" id="titleDiv" onclick="">
-            <h1 class="categoryTitle" id="categoryTitle"> Nintendo </h1>
-        </div> 
--->

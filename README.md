@@ -6,7 +6,7 @@ Latest Update: (January 16th, 2022)
 -Added filter functionality by making it so when a category is active, it will show the corresponding elements and when it is not active, the elements are hidden.
 -Added 4 products, PS5, Box X, Switch and PC, and then buttons for adding to cart and more information. 
 -Not complete, but adding mobile support where add cart and information text buttons will change to logos to save space. (The components are squished together on mobile and will need to change the layout sizes that work better for mobile)
-
+(https://imgur.com/ohekDdI)
 
 Previous Update: (January 15th, 2022)
 -Already went through 3 UI changes, 1 was a banner of different consoles that would change every few seconds, 2 was a categories bar with the name and the logo of the company, and 3 is just the logo with the colors adjusted for each brand, I have chosen 3 after testing all 3.
